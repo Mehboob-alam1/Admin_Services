@@ -65,7 +65,7 @@ public class ProviderTypesAdapter extends RecyclerView.Adapter<ProviderTypesAdap
 
             }
         });
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
+        holder.providerImage.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -75,6 +75,17 @@ public class ProviderTypesAdapter extends RecyclerView.Adapter<ProviderTypesAdap
                 context.startActivity(intent);
             }
         });
+
+
+        holder.reports.setOnClickListener(view -> {
+
+
+            Intent intent = new Intent(context,ReportActivity.class);
+            intent.putExtra("type", holder.providerType.getText().toString());
+            intent.putExtra("uID", uId);
+            context.startActivity(intent);
+        });
+
 
 
     }
@@ -87,12 +98,14 @@ public class ProviderTypesAdapter extends RecyclerView.Adapter<ProviderTypesAdap
     public class MyviewHolder extends RecyclerView.ViewHolder {
         ImageView providerImage;
         TextView providerType;
+        TextView reports;
 
         public MyviewHolder(@NonNull View itemView) {
             super(itemView);
 
             providerImage = itemView.findViewById(R.id.imgProvider);
             providerType = itemView.findViewById(R.id.txtProvider);
+            reports = itemView.findViewById(R.id.reports);
         }
     }
 }

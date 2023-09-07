@@ -32,6 +32,18 @@
                 android:padding="8dp"
                 android:layout_marginBottom="8dp"
                 android:textColor="@color/black" />
+
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="REPORTS"
+               android:padding="3dp"
+               android:textColor="@color/white"
+               android:id="@+id/reports"
+               android:textAlignment="center"
+               android:background="@color/black"/>
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

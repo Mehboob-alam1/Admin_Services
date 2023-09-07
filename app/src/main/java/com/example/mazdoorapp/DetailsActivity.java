@@ -22,14 +22,14 @@ import java.util.ArrayList;
 
 public class DetailsActivity extends AppCompatActivity {
     ActivityDetailsBinding binding;
-    String userType;
+
     DatabaseReference databaseReference;
     UserInfoModel model;
     ArrayList<UserInfoModel> list;
     RecyclerView recyclerView;
     ServiceAdapter adapter;
     String uId;
-
+    String userType;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
