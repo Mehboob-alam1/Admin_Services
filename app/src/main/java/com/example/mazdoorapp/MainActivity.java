@@ -26,5 +26,8 @@ public class MainActivity extends AppCompatActivity {
         binding.cardViewUsers.setOnClickListener(view -> startActivity(new Intent(MainActivity.this,AllUserActivity.class)));
 
 
+        binding.cardUsers.setOnClickListener(view -> startActivity(new Intent(MainActivity.this,UsersActivity.class)));
+
+
     }
 }
